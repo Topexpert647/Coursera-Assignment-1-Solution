@@ -1,0 +1,95 @@
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  header h1 {
+    text-align: center;
+    font-size: 1.75em;
+    margin: 20px 0;
+  }
+  
+  main {
+    width: 96%; /* Slight margin from the edges of the viewport */
+    max-width: 1200px; /* Maximum width of the content */
+    margin: 0 auto; /* Center the content */
+    box-sizing: border-box;
+  }
+  
+  section {
+    box-sizing: border-box;
+    margin: 10px 2%; /* Spacing between sections and viewport edge */
+    padding: 40px 20px 20px; /* Top padding to push content below the title */
+    border: 1px solid black;
+    position: relative; /* To position the section titles absolutely within */
+    background-color: gray;
+  }
+  
+  .section-title {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 5px 10px;
+    border: 1px solid black;
+  }
+  
+  .section-title h2 {
+    margin: 0;
+    font-size: 1.25em;
+ 
+  }
+
+  #Chicken{
+    background-color: rgb(241, 140, 140);
+  }
+  #Beef{
+    background-color: rgb(160, 65, 65);
+  }
+  #Sushi{
+    background-color: rgb(202, 240, 115);
+  }
+  
+  /* Desktop view: 992px and above */
+  @media (min-width: 992px) {
+    section {
+      float: left;
+      width: 31.33%;
+      margin: 10px 1%; /* Consistent spacing between sections */
+    }
+  }
+  
+/* Tablet view: Between 768px and 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    section {
+      width: 48%;
+      float: left;
+      margin: 10px 1%;
+    }
+    /* Clearfix for the floating elements */
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    /* This targets the first two sections and gives them a bottom margin */
+    .clearfix section {
+      margin-bottom: 20px; /* Add bottom margin for spacing between rows */
+    }
+    .clearfix + section {
+      width: 96%;
+      float: none;
+      margin: 10px 2%;
+      clear: both;
+    }
+  }
+  
+  /* Mobile view: Up to 767px */
+  @media (max-width: 767px) {
+    section {
+      width: 96%; /* Each section takes full width */
+      margin: 10px 2%; /* Consistent spacing around sections */
+    }
+  }
+  
